@@ -12,7 +12,7 @@ const Login = () => {
       }}>
       <div className="flex flex-col items-center mt-10 space-y-32">
         <h1 className="text-3xl font-semibold bg-black text-white w-full text-center py-4 bg-opacity-75 rounded-2xl">
-          ABC Institute of Technology
+          Madhav Institute of Technology & Science, Gwalior 
         </h1>
         <div className="grid grid-cols-2 gap-28">
           <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#5a51d6] bg-opacity-60 rounded-xl">

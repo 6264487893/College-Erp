@@ -20,8 +20,10 @@ app.use("/api/student", studentRoutes);
 
 const PORT = process.env.PORT || 5001;
 app.get("/", (req, res) => {
-  res.send("Hello to college erp API");
+  res.send("Hello to college attendance API");
 });
+mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 mongoose
   .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
