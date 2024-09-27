@@ -16,6 +16,8 @@ export const facultyLogin = async (req, res) => {
       errors.usernameError = "Faculty doesn't exist.";
       return res.status(404).json(errors);
     }
+    //If password is provided, check it
+    if(password){
     const isPasswordCorrect = await bcrypt.compare(
       password,
       existingFaculty.password
@@ -24,6 +26,7 @@ export const facultyLogin = async (req, res) => {
       errors.passwordError = "Invalid Credentials";
       return res.status(404).json(errors);
     }
+  }
 
     const token = jwt.sign(
       {
@@ -37,6 +40,7 @@ export const facultyLogin = async (req, res) => {
     res.status(200).json({ result: existingFaculty, token: token });
   } catch (error) {
     console.log(error);
+    res.status(500).json({message: "Something went wrong"});
   }
 };
 

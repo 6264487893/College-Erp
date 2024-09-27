@@ -30,7 +30,8 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+    console.log("MongoDB connected successfully.");
     addDummyAdmin();
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
-  .catch((error) => console.log("Mongo Error", error.message));
+  .catch((error) => console.log("MongoDB connection error:", error.message));

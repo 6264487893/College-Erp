@@ -84,7 +84,6 @@ const FacultyLogin = () => {
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                required
                 type={showPassword ? "text" : "password"}
                 className=" bg-[#515966] text-white rounded-lg outline-none py-2  placeholder:text-sm"
                 placeholder="Password"
