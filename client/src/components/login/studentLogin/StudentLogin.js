@@ -44,7 +44,7 @@ const StudentLogin = () => {
     }
   }, [store.errors]);
   return (
-    <div className="bg-[#d65158] h-screen w-screen flex items-center justify-center">
+    <div className="bg-[#d15236da] h-screen w-screen flex items-center justify-center">
       <div className="grid grid-cols-2">
         <div
           className={`h-96 w-96 bg-white flex items-center justify-center ${
@@ -83,7 +83,6 @@ const StudentLogin = () => {
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                required
                 type={showPassword ? "text" : "password"}
                 className=" bg-[#515966] text-white rounded-lg outline-none py-2  placeholder:text-sm"
                 placeholder="Password"
